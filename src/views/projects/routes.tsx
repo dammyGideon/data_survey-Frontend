@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter,Navigate,Route,Routes } from "react-router-dom";
+import Project from "./view/Project";
 
 const Loader=  lazy(()=>import("../../config/Loader"));
 
@@ -8,8 +9,7 @@ const Loader=  lazy(()=>import("../../config/Loader"));
         <BrowserRouter>
         <Suspense fallback={<Loader/>}>
             <Routes>
-                <Route />
-                
+                <Route path="/project" element={<Project />}></Route>
             </Routes>
         </Suspense>
         </BrowserRouter>

@@ -1,7 +1,7 @@
 const Project = () => {
     return (
         <>
-            
+            way out
         </>
     )
 }
