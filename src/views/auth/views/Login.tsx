@@ -22,6 +22,7 @@ const LoginPage = () => {
           {/* col container */}
           <Col>
             <Col md={9}>
+              {/* form component */}
               <Form>
                 <Stack gap={1} className='mb-2'>
                   <h3>Sign In</h3>
@@ -75,7 +76,7 @@ const LoginPage = () => {
           </Col>
           <Col>
             <Stack className='mx-auto'>
-              <Col xs={3} className='mx-auto'>
+              <Col xs={3} className='mx-auto text-center'>
                 <img src={wave} alt='waving hand icon' className='' />
               </Col>
               <Col className='text-center'>
