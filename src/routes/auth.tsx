@@ -1,9 +1,8 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
-
 const Loader= lazy(()=> import('../config/Loader'));
 const LoginPage = lazy(()=> import('../views/auth/views/Login'));
-const RegisterationPage = lazy(()=>import('../views/auth/views/Register'))
+const RegistrationPage = lazy(()=>import('../views/auth/views/Register'))
 const Project= lazy(()=> import ('../views/projects/view/Project'));
 const AuthRoute=()=> {
     return (
@@ -14,7 +13,7 @@ const AuthRoute=()=> {
 
                         {/* authentication route */}
                         <Route path="" element={<LoginPage />} />
-                        <Route path="/register" element = {<RegisterationPage/>} />
+                        <Route path="/register" element = {<RegistrationPage/>} />
                         <Route path="*" element={<Navigate to="/"/>} />
                         
 

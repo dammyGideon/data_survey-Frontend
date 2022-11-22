@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { lazy } from "react"
-import { Form } from "react-bootstrap"
 import Dashboard from "../../Dashboard"
-=======
 import { lazy } from 'react';
 import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
 import { useRef } from 'react';
@@ -10,22 +6,14 @@ import facebook from '../../../assets/facebook.svg';
 import google from '../../../assets/google.svg';
 import wave from '../../../assets/wave.svg';
 import loginImg from '../../../assets/login-img.png';
->>>>>>> ehis
+
 
 const InputField = lazy(() => import('../components/InputField'));
 
-<<<<<<< HEAD
-const LoginPage=()=> {
-    return (
-        <>
-            <Dashboard />
-        </>
-    )
-}
-=======
+
 const LoginPage = () => {
-  const fieldText = useRef<HTMLInputElement | null>(null);
->>>>>>> ehis
+   const fieldText = useRef<HTMLInputElement | null>(null);
+
 
   return (
     <main>

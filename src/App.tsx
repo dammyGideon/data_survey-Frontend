@@ -8,7 +8,6 @@ const App = () => {
   return (
       <Container>
         <AuthRoute />
-
       </Container>
   );
 }

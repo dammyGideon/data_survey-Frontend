@@ -1,8 +1,8 @@
-const RegisterationPage=() => {
+const RegistrationPage=() => {
     return (
         <>
             <h1>Register</h1>
         </>
     )
 }
-export default RegisterationPage
+export default RegistrationPage
