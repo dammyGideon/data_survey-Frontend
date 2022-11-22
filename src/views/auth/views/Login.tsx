@@ -1,26 +1,23 @@
-import Dashboard from "../../Dashboard"
+import Dashboard from '../../Dashboard';
 import { lazy } from 'react';
 import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
 import { useRef } from 'react';
 import facebook from '../../../assets/facebook.svg';
 import google from '../../../assets/google.svg';
 
-
-
-
-const InputField =   lazy(() => import('../components/InputField'));
-const AuthSiderBar = lazy(()=>  import('../components/authSider'));
+const InputField = lazy(() => import('../components/InputField'));
+const AuthSiderBar = lazy(() => import('../components/authSider'));
+const AuthBtn = lazy(() => import('../components/Authbtn'));
 
 const LoginPage = () => {
-   const fieldText = useRef<HTMLInputElement | null>(null);
-
+  const fieldText = useRef<HTMLInputElement | null>(null);
 
   return (
     <main>
       <Container className='mt-3'>
         <Stack className='mb-3' direction='horizontal' gap={3}>
           <div>Sign in</div>
-          <Button className='rounded-pill'>Create an account</Button>
+          <AuthBtn title='Create an Account' btnStyle='rounded-pill' />
         </Stack>
         <Row>
           {/* col container */}
@@ -57,17 +54,22 @@ const LoginPage = () => {
                 </Stack>
               </Form>
               <Stack gap={2}>
-                <Button size='lg'>Sign In</Button>
+                <AuthBtn title='Sign In' size='lg' />
                 <strong className='text-center text-uppercase text-primary'>
                   or
                 </strong>
                 <Stack direction='horizontal' gap={4}>
-                  <Button variant='outline-primary'>
-                    <img src={google} alt='google icon' /> Google sign in
-                  </Button>
-                  <Button variant='outline-primary' className=' ms-auto'>
-                    <img src={facebook} alt='facebook icon' /> Facebook sign in
-                  </Button>
+                  <AuthBtn variant='outline-primary' title='Google sign in'>
+                    <img src={google} alt='google icon' className='mx-1' />
+                  </AuthBtn>
+
+                  <AuthBtn
+                    variant='outline-primary'
+                    title='Facebook sign in'
+                    btnStyle='ms-auto'
+                  >
+                    <img src={facebook} alt='facebook icon' className='mx-1' />
+                  </AuthBtn>
                 </Stack>
               </Stack>
               <div className='mt-5'>
