@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+img {
+  width: 100%;
+}
+
+.google-img {
+  width: 25px;
+}
+
+.fb-img {
+  width: 15px;
+}
+.modal {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background-color: white;
+  color: black;
+  max-width: 320px;
+  display: block;
+  position: absolute;
+  box-shadow: 1px 4px 8px;
+  padding: 1rem;
+  border-radius: 8px;
+  height: 230px;
+}
+
+.modal-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-img {
+  width: 30px;
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 675px) {
+  .modal {
+    max-width: 550px;
+  }
+}
