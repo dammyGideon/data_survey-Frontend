@@ -1,4 +1,4 @@
-import Dashboard from '../../Dashboard';
+import Dashboard from "../../Dashboard"
 import { lazy } from 'react';
 import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
 import { useRef } from 'react';
@@ -6,32 +6,25 @@ import facebook from '../../../assets/facebook.svg';
 import google from '../../../assets/google.svg';
 
 
-const InputField = lazy(() => import('../components/InputField'));
-const AuthSiderBar = lazy(() => import('../components/authSider'));
-const AuthBtn = lazy(() => import('../components/Authbtn'));
 
-// const Modal = lazy(() => import('../components/AuthModal'));
-const InputField = lazy(() => import('../components/InputField'));
-const AuthSiderBar = lazy(() => import('../components/authSider'));
 
+const InputField =   lazy(() => import('../components/InputField'));
+const AuthSiderBar = lazy(()=>  import('../components/authSider'));
 
 const LoginPage = () => {
-  const fieldText = useRef<HTMLInputElement | null>(null);
+   const fieldText = useRef<HTMLInputElement | null>(null);
+
 
   return (
     <main>
-      <Container className='mt-5'>
-        {/* <Modal
-          title='success'
-          body='Your details have been submitted successfully, and a verificaion notification has been sent to your email. Please verify.'
-        /> */}
+      <Container className='mt-3'>
         <Stack className='mb-3' direction='horizontal' gap={3}>
           <div>Sign in</div>
-          <AuthBtn title='Create an Account' btnStyle='rounded-pill' />
+          <Button className='rounded-pill'>Create an account</Button>
         </Stack>
         <Row>
           {/* col container */}
-          <Col md={6}>
+          <Col>
             <Col md={9}>
               <Form>
                 <Stack gap={1} className='mb-2'>
@@ -64,41 +57,17 @@ const LoginPage = () => {
                 </Stack>
               </Form>
               <Stack gap={2}>
-                <AuthBtn title='Sign In' size='lg' />
+                <Button size='lg'>Sign In</Button>
                 <strong className='text-center text-uppercase text-primary'>
                   or
                 </strong>
                 <Stack direction='horizontal' gap={4}>
-
-                  <AuthBtn variant='outline-primary' title='Google sign in'>
-                    <img src={google} alt='google icon' className='mx-1' />
-                  </AuthBtn>
-
-                  <AuthBtn
-                    variant='outline-primary'
-                    title='Facebook sign in'
-                    btnStyle='ms-auto'
-                  >
-                    <img src={facebook} alt='facebook icon' className='mx-1' />
-                  </AuthBtn>
-
                   <Button variant='outline-primary'>
-                    <img
-                      src={google}
-                      alt='google icon'
-                      className='google-img'
-                    />{' '}
-                    Google sign in
+                    <img src={google} alt='google icon' /> Google sign in
                   </Button>
                   <Button variant='outline-primary' className=' ms-auto'>
-                    <img
-                      src={facebook}
-                      alt='facebook icon'
-                      className='fb-img'
-                    />{' '}
-                    Facebook sign in
+                    <img src={facebook} alt='facebook icon' /> Facebook sign in
                   </Button>
-
                 </Stack>
               </Stack>
               <div className='mt-5'>
@@ -108,8 +77,7 @@ const LoginPage = () => {
               </div>
             </Col>
           </Col>
-
-          <Col md={6}>
+          <Col>
             <AuthSiderBar />
           </Col>
         </Row>
