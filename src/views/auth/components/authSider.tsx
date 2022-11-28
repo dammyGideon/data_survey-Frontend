@@ -6,15 +6,23 @@ const AuthSiderBar = () => {
   return (
     <>
       <Stack className='mx-auto'>
+
         <Col xs={3} className='mx-auto text-center'>
           <img src={wave} alt='waving hand icon' />
+
+        <Col className='mx-auto'>
+          <img src={wave} alt='waving hand icon' className='' />
+
         </Col>
         <Col className='text-center'>
           <h2>Welcome back</h2>
           <p>Enter your email and password to experience wonders</p>
         </Col>
 
+
         <Col xs={3}>
+        <Col>
+
           <img src={loginImg} alt='illustration' />
         </Col>
       </Stack>
