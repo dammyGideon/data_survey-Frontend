@@ -48,8 +48,11 @@ const ForgotPassword = () => {
             </div>
           </Col>
         </Col>
-        <Col>
-          <AuthSiderBar />
+        <Col sm={12} md={6}>
+          <AuthSiderBar
+            title='Reset Password'
+            info='Please enter new password sent to your email!'
+          />
         </Col>
       </Row>
     </Container>

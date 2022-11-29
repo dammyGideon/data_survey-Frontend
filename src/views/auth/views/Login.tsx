@@ -2,6 +2,7 @@ import Dashboard from '../../Dashboard';
 import { lazy } from 'react';
 import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
 import { useRef } from 'react';
+import wave from '../../../assets/wave.svg';
 import facebook from '../../../assets/facebook.svg';
 import google from '../../../assets/google.svg';
 
@@ -84,7 +85,12 @@ const LoginPage = () => {
             </Col>
           </Col>
           <Col sm={12} md={6}>
-            <AuthSiderBar />
+            <AuthSiderBar
+              title='Welcome back'
+              info='Enter your email and password to experience wonders'
+            >
+              <img src={wave} alt='waving hand icon' className='wave' />
+            </AuthSiderBar>
           </Col>
         </Row>
       </Container>
