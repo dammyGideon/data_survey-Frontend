@@ -1,54 +1,50 @@
-import { lazy } from 'react';
-import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
-import { useRef } from 'react';
+import { Button, Container, Row, Stack } from 'react-bootstrap';
+import { useState } from 'react';
+import UserForm from '../components/UserForm';
+import CreatePassword from '../components/CreatePassword';
+import CreateEmail from '../components/CreateEmail';
 
-const InputField = lazy(() => import('../components/InputField'));
-const AuthSiderBar = lazy(() => import('../components/authSider'));
+type Pages = 'Create Account' | 'Create Email' | 'Create Password';
 
 const RegistrationPage = () => {
-  const fieldText = useRef<HTMLInputElement | null>(null);
+  const [currentPage, setcurrentPage] = useState<Pages>('Create Email');
+
+  const onEmailSubmit = () => {
+    setcurrentPage('Create Account');
+  };
+
+  const onCreateAccount = () => {
+    setcurrentPage('Create Password');
+  };
+  // const showAccountComponent = () => {
+  //   setCreateEmail(false);
+  // };
+  // const showCreatePassword = () => {
+  //   setCreateAccount(true);
+  // };
+
+  // const renderPage = ()=>{
+  //   <div>
+  // {(currentPage === "CreateEmail") ? <CreateEmail> : (currentPage === "CreateAccount") ? <UserForm/> : currentPage === "CreatePassword": <CreatePassword/>;}
+
+  //   </div>
+  // }
 
   return (
     <main>
-      <Container className='mt-3'>
+      <Container className='mt-5'>
         <Stack className='mb-3' direction='horizontal' gap={3}>
           <Button className='rounded-pill'>Sign in</Button>
           <div>Create an Account</div>
         </Stack>
         <Row className='mt-5'>
-          {/* col container */}
-          <Col>
-            <Col md={9}>
-              <Form>
-                <Stack gap={1} className='mb-2'>
-                  <h3>Enter Email</h3>
-                  <p>Enter your email and password to sign in</p>
-                </Stack>
-
-                <Stack gap={3} className='mt-5'>
-                  <InputField
-                    name='Email'
-                    label='Email'
-                    type='email'
-                    placeholder='Please enter email'
-                    error=''
-                    fieldRef={fieldText}
-                  />
-                </Stack>
-              </Form>
-
-              <div className='mt-5 d-grid '>
-                <Button size='lg' className='mb-3'>
-                  Continue
-                </Button>
-                <p>
-                  Ensure you enter your active email address, verification link
-                  will be sent to you!
-                </p>
-              </div>
-            </Col>
-          </Col>
-          <Col></Col>
+          {currentPage === 'Create Email' ? (
+            <CreateEmail createEmail={onEmailSubmit} />
+          ) : currentPage === 'Create Account' ? (
+            <UserForm createAccount={onCreateAccount} />
+          ) : (
+            <CreatePassword />
+          )}
         </Row>
       </Container>
     </main>
