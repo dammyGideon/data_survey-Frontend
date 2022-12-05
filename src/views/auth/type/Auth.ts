@@ -3,5 +3,10 @@ interface AuthProps {
   createAccount?: () => void;
   createPassword?: () => void;
 }
+export interface VerificationProps {
+  forgotPassword?: () => void;
+  verifyEmail?: () => void;
+  setPassword?: () => void;
+}
 
 export default AuthProps;
