@@ -9,13 +9,13 @@ import { VerificationProps } from '../type/Auth';
 const InputField = lazy(() => import('./InputField'));
 const AuthSiderBar = lazy(() => import('./authSider'));
 
-const Login = ({ forgotPassword }: VerificationProps) => {
+const Login = ({ forgotPassword, createAccount }: VerificationProps) => {
   const fieldText = useRef<HTMLInputElement | null>(null);
 
   return (
     <Container className='mt-3'>
       <Stack className='mb-3' direction='horizontal' gap={3}>
-        <div>Sign in</div>
+        <div className='line'>Sign in</div>
         <Button className='rounded-pill'>Create an account</Button>
       </Stack>
       <Row>
@@ -67,18 +67,27 @@ const Login = ({ forgotPassword }: VerificationProps) => {
               </strong>
               <Stack direction='horizontal' gap={4}>
                 <Button variant='outline-primary'>
-                  <img src={google} alt='google icon' className='google-img' />{' '}
+                  <img src={google} alt='google icon' className='google-img' />
                   Google sign in
                 </Button>
                 <Button variant='outline-primary' className=' ms-auto'>
-                  <img src={facebook} alt='facebook icon' className='fb-img' />{' '}
+                  <img src={facebook} alt='facebook icon' className='fb-img' />
                   Facebook sign in
                 </Button>
               </Stack>
             </Stack>
             <div className='mt-5'>
               <p>
-                Not a member yet, <span>Create an Account?</span>
+                Not a member yet,
+                <span>
+                  <Button
+                    variant='link'
+                    style={{ textDecoration: 'none', marginBottom: '2px' }}
+                    onClick={createAccount}
+                  >
+                    Create an Account
+                  </Button>
+                </span>
               </p>
             </div>
           </Col>
