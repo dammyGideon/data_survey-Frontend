@@ -35,7 +35,7 @@ const RegistrationPage = () => {
       <Container className='mt-5'>
         <Stack className='mb-3' direction='horizontal' gap={3}>
           <Button className='rounded-pill'>Sign in</Button>
-          <div>Create an Account</div>
+          <div className='line'>Create an Account</div>
         </Stack>
         <Row className='mt-5'>
           {currentPage === 'Create Email' ? (

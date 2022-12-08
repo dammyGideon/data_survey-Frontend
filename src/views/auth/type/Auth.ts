@@ -3,7 +3,7 @@ interface AuthProps {
   createAccount?: () => void;
   createPassword?: () => void;
 }
-export interface VerificationProps {
+export interface VerificationProps extends AuthProps {
   forgotPassword?: () => void;
   verifyEmail?: () => void;
   setPassword?: () => void;

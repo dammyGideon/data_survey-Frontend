@@ -13,7 +13,7 @@ const EmailVerification = ({ verifyEmail }: VerificationProps) => {
     <Container className='mt-3'>
       <Stack className='mb-3' direction='horizontal' gap={3}>
         <Button className='rounded-pill'>Sign In</Button>
-        <div>Email Verification</div>
+        <div className='line'>Email Verification</div>
       </Stack>
       <Row className='mt-5'>
         <Col>
