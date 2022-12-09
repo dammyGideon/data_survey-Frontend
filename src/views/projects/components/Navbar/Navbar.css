@@ -1,0 +1,43 @@
+.nav {
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 0.4rem;
+}
+
+.nav-logo,
+.nav-path {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.nav-menu {
+  margin-bottom: 14px;
+}
+
+.profile {
+  border-radius: 50%;
+  background: #4aa483;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 5px 13px;
+  height: 35px;
+  width: 35px;
+}
+
+.nav-logo,
+.nav-menu,
+.profile,
+.nav-bell,
+.nav-help {
+  cursor: pointer;
+}
