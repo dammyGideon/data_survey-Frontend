@@ -4,6 +4,7 @@ import { Button, Col, Container, Row, Stack } from 'react-bootstrap';
 const Navbar = lazy(() => import('../components/Navbar/Navbar'));
 const ProjectImage = lazy(() => import('../components/ProjectImage'));
 const InputField = lazy(() => import('../../auth/components/InputField'));
+const Catalog = lazy(() => import('./Catalog'));
 
 const Project = () => {
   const fieldText = useRef<HTMLInputElement | null>(null);
@@ -12,7 +13,7 @@ const Project = () => {
     <>
       <Navbar path='Projects' />
       <main>
-        <Container fluid className='pt-4'>
+        {/* <Container fluid className='pt-4'>
           <Row className='gap-5'>
             <ProjectImage />
             <Col>
@@ -43,7 +44,8 @@ const Project = () => {
               </Col>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
+        <Catalog />
       </main>
     </>
   );

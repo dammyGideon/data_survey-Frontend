@@ -16,7 +16,7 @@ const UserForm = ({ createAccount }: AuthProps) => {
           <Form>
             <Stack gap={3} className='mt-2'>
               <InputField
-                name='lirst-name'
+                name='First-name'
                 label='First Name'
                 type='text'
                 placeholder='Please enter your first name'

@@ -1,0 +1,28 @@
+.accordion-item {
+  border-radius: 0 !important;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-item p {
+  text-align: left;
+  padding: 0;
+}
+
+.accordion-button {
+  background: #f9fafc;
+}
+.accordion-button::after {
+  transform: rotate(90deg);
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
+}
+.accordion-button:focus {
+  box-shadow: none;
+  background: #f9fafc;
+}
+
+.accordion {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
