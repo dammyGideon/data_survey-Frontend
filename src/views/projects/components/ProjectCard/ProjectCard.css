@@ -1,0 +1,21 @@
+.card-header {
+  text-align: right;
+  padding: 1rem 1rem 1.5rem 0;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -25px;
+  border-radius: 50%;
+  background: black;
+  padding: 0.2rem;
+}
+
+.card-img img {
+  width: 70%;
+}

@@ -1,0 +1,16 @@
+.project-section {
+  background: #f9fafc;
+  padding: 1rem 1rem 0rem;
+}
+
+.cta {
+  width: 90%;
+  background: #272848;
+  color: white;
+}
+
+.card-section {
+  padding: 0 0.5rem;
+  margin: 0 auto;
+  width: 90%;
+}
